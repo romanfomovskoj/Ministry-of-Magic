@@ -1,0 +1,444 @@
+/* Подключение шрифта EB Garamond с различными начертаниями */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+/* Плавная прокрутка для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Сброс стандартных отступов и установка box-sizing для всех элементов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили для body */
+body {
+    font-family: 'EB Garamond', serif;
+    background-color: #1a1a1a; /* Более светлый темный фон */
+    background-image: url('https://learn.logikaschool.com/uploads/student/1732923/6820978625dde.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    color: #d4af37; /* Золотой цвет текста по умолчанию */
+}
+
+/* Стили для шапки сайта */
+header {
+    width: 1200px; /* Фиксированная ширина хедера */
+    height: 80px; /* Фиксированная высота хедера */
+    margin: 0 auto; /* Центрирование хедера */
+    background-color: rgba(33, 33, 33, 0.9); /* Более светлый фон с прозрачностью */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для эффекта "поднятия" */
+    position: relative; /* Для z-index */
+    z-index: 1; /* Чтобы хедер был поверх фона */
+}
+
+/* Контейнер для содержимого хедера */
+.header-container {
+    display: flex; /* Использование flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    height: 100%; /* Занимает всю высоту хедера */
+    padding: 0 20px; /* Отступы слева и справа */
+}
+
+/* Стили для блока с логотипом */
+.logo {
+    height: 60px; /* Высота логотипа */
+}
+
+/* Стили для изображения логотипа */
+.logo img {
+    height: 100%; /* Занимает всю высоту родительского блока */
+    object-fit: contain; /* Сохранение пропорций изображения */
+}
+
+/* Стили для навигационного меню */
+nav {
+    flex: 1; /* Занимает все доступное пространство */
+}
+
+/* Стили для списка пунктов меню */
+nav ul {
+    display: flex; /* Горизонтальное расположение пунктов меню */
+    justify-content: center; /* Центрирование пунктов меню */
+    list-style: none; /* Удаление маркеров списка */
+    gap: 60px; /* Равномерные отступы между пунктами меню */
+}
+
+/* Стили для ссылок в меню */
+nav a {
+    color: #d4af37; /* Золотой цвет текста */
+    text-decoration: none; /* Удаление подчеркивания */
+    font-size: 18px; /* Размер шрифта */
+    font-weight: 500; /* Насыщенность шрифта */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+/* Стили для ссылок при наведении */
+nav a:hover {
+    color: #fff; /* Белый цвет текста при наведении */
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* Свечение текста */
+}
+
+/* Стили для основного содержимого страницы */
+main {
+    width: 1200px; /* Фиксированная ширина контента */
+    margin: 0 auto; /* Центрирование контента */
+    padding: 40px 20px; /* Отступы сверху и снизу, слева и справа */
+}
+
+/* Стили для приветственного блока */
+.welcome-section {
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 60px; /* Отступ снизу */
+    padding: 40px; /* Внутренние отступы */
+    background-color: rgba(33, 33, 33, 0.8); /* Полупрозрачный темный фон */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта "поднятия" */
+}
+
+/* Стили для заголовка приветствия */
+.welcome-title {
+    text-align: center;
+    font-size: 60px;
+    color: #d4af37;
+}
+
+/* Стили для остальных заголовков h1 */
+h1:not(.welcome-title) {
+    text-align: center;
+    font-size: 60px;
+    color: #d4af37;
+    transition: all 0.3s ease;
+}
+
+/* Эффекты при наведении на остальные заголовки h1 */
+h1:not(.welcome-title):hover {
+    color: #ffd700;
+    font-size: 65px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Стили для заголовков приветственного блока */
+.welcome-section h1 {
+    font-size: 32px; /* Размер шрифта */
+    margin-bottom: 20px; /* Отступ снизу */
+    color: #fff; /* Белый цвет текста */
+}
+
+.welcome-section h2 {
+    font-size: 24px; /* Размер шрифта */
+    margin-bottom: 20px; /* Отступ снизу */
+    color: #d4af37; /* Золотой цвет текста */
+}
+
+/* Стили для параграфов приветственного блока */
+.welcome-section p {
+    font-size: 18px; /* Размер шрифта */
+    line-height: 1.6; /* Межстрочный интервал */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стили для секции новостей */
+.news-section {
+    background-color: rgba(33, 33, 33, 0.8); /* Полупрозрачный темный фон */
+    padding: 30px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта "поднятия" */
+}
+
+/* Стили для заголовка секции новостей */
+.news-section h2 {
+    font-size: 28px; /* Размер шрифта */
+    margin-bottom: 30px; /* Отступ снизу */
+    text-align: center; /* Центрирование текста */
+    color: #fff; /* Белый цвет текста */
+}
+
+/* Стили для сетки новостей */
+.news-grid {
+    display: grid; /* Использование CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* Три колонки равной ширины */
+    gap: 30px; /* Отступы между элементами */
+}
+
+/* Стили для новостного блока */
+.news-item {
+    background-color: rgba(26, 26, 26, 0.9); /* Полупрозрачный темный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругление углов */
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+}
+
+/* Эффект при наведении на новостной блок */
+.news-item:hover {
+    transform: translateY(-5px); /* Поднятие блока вверх */
+}
+
+/* Стили для заголовков новостей */
+.news-item h3 {
+    font-size: 20px; /* Размер шрифта */
+    margin-bottom: 15px; /* Отступ снизу */
+    color: #fff; /* Белый цвет текста */
+}
+
+/* Стили для мета-информации новостей */
+.news-date, .news-case, .news-accused, .news-summary {
+    font-size: 16px; /* Размер шрифта */
+    margin-bottom: 10px; /* Отступ снизу */
+    color: #d4af37; /* Золотой цвет текста */
+}
+
+/* Стили для ссылки "Читать далее" */
+.read-more {
+    display: inline-block; /* Блочно-строчный элемент */
+    margin-top: 15px; /* Отступ сверху */
+    color: #d4af37; /* Золотой цвет текста */
+    text-decoration: none; /* Удаление подчеркивания */
+    font-style: italic; /* Курсивный шрифт */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+/* Эффект при наведении на ссылку "Читать далее" */
+.read-more:hover {
+    color: #fff; /* Белый цвет текста */
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); /* Свечение текста */
+}
+
+/* Стили для секции с директорами */
+.images-section {
+    text-align: center; /* Центрирование содержимого */
+    margin: 2rem 0; /* Отступы сверху и снизу */
+}
+
+/* Контейнер для изображений директоров */
+.images-container {
+    display: flex; /* Горизонтальное расположение элементов */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    gap: 20px; /* Отступы между элементами */
+}
+
+/* Стили для контейнера с изображением и подписью */
+.image-wrapper {
+    display: flex; /* Вертикальное расположение элементов */
+    flex-direction: column; /* Элементы располагаются в колонку */
+    align-items: center; /* Центрирование по горизонтали */
+    gap: 10px; /* Отступ между изображением и подписью */
+}
+
+/* Стили для подписи под изображением */
+.image-caption {
+    color: #d4af37; /* Золотой цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    text-align: center; /* Центрирование текста */
+    margin: 0; /* Убираем отступы */
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3); /* Свечение текста */
+}
+
+/* Стили для большого изображения */
+.image-large {
+    width: 100px; /* Ширина изображения */
+    height: 100px; /* Высота изображения */
+    object-fit: cover; /* Сохранение пропорций с обрезкой */
+    border-radius: 100%; /* Круглая форма */
+}
+
+/* Стили для маленького изображения */
+.image-small {
+    width: 80px; /* Ширина изображения */
+    height: 80px; /* Высота изображения */
+    object-fit: cover; /* Сохранение пропорций с обрезкой */
+    border-radius: 100%; /* Круглая форма */
+}
+
+/* Стили для заголовка секции департаментов */
+h1 {
+    text-align: center; /* Центрирование текста */
+    font-size: 60px; /* Размер шрифта */
+    color: #d4af37;
+    transition: all 0.3s ease;
+}
+
+/* Эффекты при наведении на заголовок h1 */
+h1:hover {
+    font-size: 45px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Стили для секции с департаментами */
+.four-images-section {
+    margin: 3rem 0; /* Отступы сверху и снизу */
+    text-align: center; /* Центрирование содержимого */
+}
+
+/* Контейнер для блоков департаментов */
+.four-images-container {
+    display: grid; /* Использование CSS Grid */
+    grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
+    gap: 30px; /* Отступы между элементами */
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+/* Стили для блока с изображением и текстом департамента */
+.image-text-box {
+    background-color: rgba(33, 33, 33, 0.8); /* Полупрозрачный темный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Тень для эффекта "поднятия" */
+}
+
+/* Стили для изображения в блоке департамента */
+.box-image {
+    width: 200px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+    object-fit: cover; /* Сохранение пропорций с обрезкой */
+    border-radius: 10px; /* Скругление углов */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+/* Стили для текста в блоке департамента */
+.box-text {
+    color: #d4af37; /* Золотой цвет текста */
+    font-size: 18px; /* Размер шрифта */
+    margin: 0; /* Убираем отступы */
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3); /* Свечение текста */
+}
+
+/* Стили для заголовка новостей */
+.news-title {
+    text-align: center; /* Центрирование текста */
+    font-size: 40px; /* Размер шрифта */
+    color: #d4af37; /* Золотой цвет текста */
+    margin: 2rem 0; /* Отступы сверху и снизу */
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); /* Усиленное свечение текста */
+    font-weight: 700; /* Жирный шрифт */
+}
+
+/* Стили для секции с тремя div-ами */
+.three-divs-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+/* Контейнер для div-ов */
+.div-container {
+    display: flex;
+    justify-content: space-between; /* Распределение пространства между элементами */
+    gap: 30px;
+    max-width: 1000px; /* Увеличим максимальную ширину для лучшего распределения */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для каждого div-а */
+.simple-div {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 200px;
+    flex: 1; /* Равномерное распределение пространства */
+}
+
+/* Стили для правых div-ов */
+.simple-div:nth-child(2),
+.simple-div:nth-child(3) {
+    margin-left: auto; /* Прижимаем к правому краю */
+}
+
+/* Стили для текста в div-ах */
+.simple-div p {
+    color: #d4af37;
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+/* Стили для секции с матчами по квиддичу */
+.quidditch-matches {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+/* Контейнер для матчей */
+.matches-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для блока с матчем */
+.match-box {
+    background-color: rgba(33, 33, 33, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* Эффект при наведении на блок с матчем */
+.match-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Стили для текста матча */
+.match-text {
+    color: #d4af37;
+    font-size: 40px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+/* Эффекты при наведении на текст */
+.match-box:hover .match-text {
+    color: #ffd700;
+    font-size: 45px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Стили для заголовка */
+h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #d4af37;
+    transition: all 0.3s ease;
+}
+
+/* Эффекты при наведении на заголовок */
+h2:hover {
+    color: #ffd700;
+    font-size: 30px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Стили для параграфов в новостях */
+.news-item p {
+    color: #d4af37;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Эффекты при наведении на параграфы в новостях */
+.news-item:hover p {
+    color: #ffd700;
+    font-size: 18px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    transform: scale(1.02);
+}
